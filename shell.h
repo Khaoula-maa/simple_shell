@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 #define shell_h
 #include <stdio.h>
 #include <stdlib.h>
@@ -178,7 +176,6 @@ typedef struct passinfo
 	char *arg;
 	char **argv;
 	char *path;
-<<<<<<< HEAD
 	char *fname;
 	char **environ;
 	char **cmd_buf;
@@ -419,4 +416,3 @@ int replace_vars(info_t *);
 int replace_string(char **, char *);
 
 #endif
->>>>>>> refs/remotes/origin/master
