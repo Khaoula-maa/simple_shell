@@ -3,27 +3,27 @@
  * built_ins - checks if command is a built-in
  * @input: tokenized line from the command line
  * @env_head: pointer to environ list
- * @return 0 if the command was executed successfully, 
+ * @return 0 if the command was executed successfully,
  * 1 if there was an error, or -1 if the command was not found.
  */
-int built_ins(char **input, list_t **env_head) 
+int built_ins(char **input, list_t **env_head)
 {
-        char *name;
-        int (*function)(char **input, list_t **env_head);
+	char *name;
+	int (*function)(char **input, list_t **env_head);
 	builtins[] = {
-        {"exit", exit_bi},
-        {"env", print_env},
-        {"setenv", set_env},
-        {"unsetenv", unset_env},
-        {NULL, NULL}
-    };
-    int i = 0, result = -1;
-    list_t *tmp = *env_head;
-
-    if (input == NULL) {
-        perror("built_ins");
-        return 1;
-    }
+		{"exit", exit_bi},
+		{"env", print_env},
+		{"setenv", set_env},
+		{"unsetenv", unset_env},
+		{NULL, NULL}
+	};
+	int i = 0, result = -1;
+	list_t *tmp = *env_head;
+	
+	if (input == NULL) {
+		perror("built_ins");
+		return 1;
+	}
     i = 0;
     while ((builtins + i)->bi != NULL)
     {
