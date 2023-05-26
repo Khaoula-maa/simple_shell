@@ -1,12 +1,11 @@
 #include "shell.h"
 
 /**
-<<<<<<< HEAD
+ * HEAD
  * main - Entry point to the shell program
  * Return: Always returns 0 on success
  */
-int main(void)
-{
+int main(void){
   char *input_buffer, *input_line;
   list_t *env_list_head;
   int return_value;
@@ -30,8 +29,8 @@ int main(void)
   free(input_buffer);
 
   /* Return the return value of the main loop */
-  return return_value;
-=======
+  return return_value
+/*
  * main - program entry point
  * @ac: arg count
  * @av: arg vector
